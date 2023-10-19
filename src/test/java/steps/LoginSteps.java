@@ -34,6 +34,7 @@ public class LoginSteps {
     public void i_m_authenticated() {
         Assertions.assertTrue(inventoryPage.isThere(InventoryPage.URL_INVENTORY_PAGE));
         loginPage.getCookies();
+        loginPage.saveCookiesToFile();
     }
 
     @When("I insert invalid {word} and invalid {word}")

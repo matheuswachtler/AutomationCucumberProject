@@ -28,7 +28,6 @@ public class BasePage {
 
     public void getCookies() {
         cookies = webDriver.manage().getCookies();
-        saveCookiesToFile();
     }
 
     public void saveCookiesToFile() {

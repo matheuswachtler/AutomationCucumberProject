@@ -1,4 +1,3 @@
-@order2
 Feature: This feature test the Inventory Page.
 
   Scenario: Should Add item to the cart

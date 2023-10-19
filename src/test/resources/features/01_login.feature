@@ -1,4 +1,3 @@
-@order1
 Feature: This feature test the login page
 
   @login
