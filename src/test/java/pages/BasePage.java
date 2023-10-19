@@ -27,7 +27,7 @@ public class BasePage {
 
     //Cookies Manager
 
-    public void captureAndSaveCookies() {
+    public void getCookies() {
         cookies = webDriver.manage().getCookies();
         saveCookiesToFile();
     }
@@ -43,7 +43,6 @@ public class BasePage {
         }
     }
 
-
     public void loadAndAddCookies() {
         Gson gson = new Gson();
         Type cookieSetType = new TypeToken<Set<Cookie>>() {}.getType();
@@ -57,6 +56,7 @@ public class BasePage {
             e.printStackTrace();
         }
     }
+
     //Common methods
 
     public void navigate(String url) {

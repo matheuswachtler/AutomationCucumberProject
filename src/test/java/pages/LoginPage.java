@@ -13,11 +13,13 @@ import java.time.Duration;
 public class LoginPage extends BasePage {
 
     WebDriverWait wait;
+
     public LoginPage(WebDriver webDriver) {
         super(webDriver);
         wait = new WebDriverWait(webDriver, Duration.ofSeconds(5));
-        PageFactory.initElements(webDriver,this);
+        PageFactory.initElements(webDriver, this);
     }
+
     public static final String URL_LOGIN_PAGE = "https://www.saucedemo.com/";
 
     @FindBy(id = "user-name")
@@ -35,7 +37,7 @@ public class LoginPage extends BasePage {
 
         wait.until(ExpectedConditions.visibilityOf(passwordLabel));
         passwordLabel.sendKeys(password);
-        
+
         passwordLabel.submit();
     }
 }
