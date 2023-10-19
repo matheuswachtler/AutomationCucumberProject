@@ -13,7 +13,6 @@ import java.lang.reflect.Type;
 import java.util.Set;
 
 public class BasePage {
-
     private final WebDriver webDriver;
     private static Set<Cookie> cookies;
     private static final String COOKIES_FILE = "cookies.json";
