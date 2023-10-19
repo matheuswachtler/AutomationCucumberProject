@@ -25,5 +25,5 @@ jobs:
       run: mvn -B package --file pom.xml
 
     - name: UI Test
-      run: mvn clean verify
+      run: mvn verify
 
