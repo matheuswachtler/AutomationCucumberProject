@@ -30,7 +30,7 @@ public class WebDriverManager {
             if (browser.equals("chrome")) {
                 ChromeOptions options = new ChromeOptions();
                 options.setExperimentalOption("excludeSwitches", Collections.singletonList("enable-automation"));
-                options.addArguments("--headless");
+//                options.addArguments("--headless");
                 options.addArguments("--disable-extensions");
                 options.addArguments("--disable-gpu");
                 options.addArguments("--disable-dev-shm-usage");
@@ -56,6 +56,7 @@ public class WebDriverManager {
     }
 
     public static void quitWebDriver() {
+        WebDriverWait wait = new WebDriverWait(webDriver,Duration.ofSeconds(5));
         if (webDriver != null) {
             webDriver.quit();
             webDriver = null;

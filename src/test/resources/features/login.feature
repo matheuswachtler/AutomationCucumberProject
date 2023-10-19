@@ -1,4 +1,5 @@
-Feature: This feature tests the login page
+@order1
+Feature: This feature test the login page
 
   @login
   Scenario: Should acess with valid data
@@ -6,7 +7,7 @@ Feature: This feature tests the login page
     When I insert valid data
     Then I'm authenticated
 
-  @login
+
   Scenario Outline: Shouldn't acess with invalid data
     Given I'm on the login page
     When I insert invalid <email> and invalid <password>
@@ -20,7 +21,7 @@ Feature: This feature tests the login page
       | null_value            | Wrong123@456 |
       | null_value            | null_value   |
 
-  @login
+
   Scenario: Shouldn't access restricted page without being authenticated
     Given I'm on the login page
     When I try acess some restrict page without being authenticated

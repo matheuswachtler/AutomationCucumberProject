@@ -31,6 +31,7 @@ public class HookSteps {
         }
     }
 
+
     static {
         logger.setLevel(Level.SEVERE);
 
