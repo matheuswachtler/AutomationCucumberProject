@@ -2,6 +2,9 @@ package steps;
 
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
+import io.cucumber.java.Scenario;
+
+import pages.BasePage;
 import utils.WebDriverManager;
 
 import java.io.IOException;
@@ -10,7 +13,9 @@ import java.util.logging.Handler;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class HookSteps {
+
+
+public class HookSteps{
     private static final Logger logger = Logger.getLogger(HookSteps.class.getName());
 
     @Before(order = 0)
